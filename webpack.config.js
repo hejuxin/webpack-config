@@ -23,6 +23,18 @@ module.exports = {
       {
         test: /\.styl$/,
         use: ["stylus-loader"]
+      },
+      {
+        test: /\.png$/,
+        type: 'asset',
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024 // 4kb
+          }
+        },
+        generator: {
+          filename: 'static/[hash:8][ext][query]'
+        }
       }
     ]
   },

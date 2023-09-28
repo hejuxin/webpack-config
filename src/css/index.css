@@ -3,3 +3,17 @@
   height: 100px;
   background: pink;
 }
+
+.img1 {
+  width: 100px;
+  height: 100px;
+  background: url('../assets/empty.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.img2 {
+  width: 100px;
+  height: 100px;
+  background: url('../assets/calendar.png') no-repeat;
+  background-size: 100% 100%;
+}
