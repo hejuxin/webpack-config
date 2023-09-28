@@ -45,6 +45,11 @@ module.exports = {
         generator: {
           filename: 'static/[hash:8][ext][query]'
         }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['babel-loader']
       }
     ]
   },
