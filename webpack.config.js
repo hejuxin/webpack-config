@@ -38,6 +38,13 @@ module.exports = {
         generator: {
           filename: 'static/[hash:8][ext][query]'
         }
+      },
+      {
+        test: /\.(ttf)$/,
+        type: "asset/resource",
+        generator: {
+          filename: 'static/[hash:8][ext][query]'
+        }
       }
     ]
   },
