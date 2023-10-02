@@ -62,5 +62,11 @@ module.exports = {
       context: path.resolve(__dirname, 'src')
     })
   ],
+  devServer: {
+    host: 'localhost',
+    port: '3000',
+    open: true
+  },
+
   mode: 'development'
 }
