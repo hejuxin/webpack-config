@@ -62,6 +62,7 @@ module.exports = {
       context: path.resolve(__dirname, 'src')
     })
   ],
+  // 开启devServer后 不会有输出文件到dist文件夹
   devServer: {
     host: 'localhost',
     port: '3000',
