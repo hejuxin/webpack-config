@@ -6,7 +6,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].[hash:8].js',
     clean: true
   },
@@ -56,18 +56,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'public/index.html')
+      template: path.resolve(__dirname, '../public/index.html')
     }),
     new ESLintPlugin({
-      context: path.resolve(__dirname, 'src')
+      context: path.resolve(__dirname, '../src')
     })
   ],
-  // 开启devServer后 不会有输出文件到dist文件夹
-  devServer: {
-    host: 'localhost',
-    port: '3000',
-    open: true
-  },
-
-  mode: 'development'
+  mode: 'production'
 }
