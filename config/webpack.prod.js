@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: './src/main.js',
@@ -96,7 +97,8 @@ module.exports = {
     new ESLintPlugin({
       context: path.resolve(__dirname, '../src')
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
+    new CssMinimizerPlugin()
   ],
   mode: 'production'
 }
